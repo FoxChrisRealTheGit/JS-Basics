@@ -5,7 +5,8 @@ var name = 'Tyler';
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
-
+var isTyler = (name) =>name ==='Tyler'?true:false;
+//console.log(isTyler(name));
 //////////////////PROBLEM 2////////////////////
 
 
@@ -13,8 +14,10 @@ var name = 'Tyler';
 
 
   //Code Here
-
-
+var getName = () => {
+  var name =prompt("What is your name")
+  return name;
+}
 //////////////////PROBLEM 3////////////////////
 
 
@@ -23,7 +26,9 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
-
+var welcome = () =>{
+  alert("Welcome, " + getName());
+}
 
 //////////////////PROBLEM 4////////////////////
 
@@ -34,6 +39,7 @@ var name = 'Tyler';
 
   //Answer Here
 
+//arguments are used in function calling a function, parameters are used as placeholders when declaring a function
 
 //////////////////PROBLEM 5////////////////////
 
@@ -43,6 +49,8 @@ var name = 'Tyler';
 
 
   //Answer Here
+//false, Undefined, Null, 0, '', "", NaN
+//NaN can be checked if the item is not equal to itself
 
 
 
@@ -53,16 +61,18 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
-
+  //var myName = () => "Christopher";
+function myName (){
+  return "Christopher";
+}
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-
+var newMyName = myName;
 //Now alert the result of invoking newMyName
 
-
+alert(newMyName);
 
 //////////////////PROBLEM 7////////////////////
 
@@ -71,9 +81,11 @@ var name = 'Tyler';
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-
+var outerFn = () => ()=>"Christopher";
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-
+var innerFn = outerFn();
 //Now invoke innerFn.
+innerFn();
+//console.log(innerFn());
